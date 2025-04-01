@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – 6. Lecke: Mondatszerkesztés és Szórend</title>
+  <meta name="description" content="Ebben a leckében a helyes mondatszerkesztést és a szórendet mutatjuk be, majd egy kvízzel tesztelheted tudásodat." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (../kepek/logo_fav.png) -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px;
+      box-sizing: border-box;
+    }
+    /* Fix navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    /* Fejléc-kép */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+    /* Sötét mód */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+    /* Példamondatok és magyarázat */
+    .example-sentences, .extended-explanation {
+      margin-bottom: 2em;
+    }
+    .example-sentences ul {
+      list-style: none;
+      padding: 0;
+    }
+    .example-sentences li {
+      margin: 0.5em 0;
+    }
+    /* Kvíz stílusok */
+    .quiz-section {
+      margin-top: 2em;
+    }
+    .quiz-question {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .quiz-question p {
+      margin: 0.5em 0;
+    }
+    .option-btn {
+      margin: 0.25em;
+      padding: 0.5em 1em;
+      border: 1px solid #999;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .option-btn.selected {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li><a href="index.html">Leckék</a></li>
+      <li><a href="#">Szókincs</a></li>
+      <li><a href="#">Gyakorlatok</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Fejléc-kép -->
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+
+  <main>
+    <section>
+      <h1>6. Lecke: Mondatszerkesztés és Szórend</h1>
+      <p>
+        A német mondatszerkesztés alapja a V2-szabály, mely szerint a ragozott ige mindig a főmondat második pozíciójában található.
+        Emellett a mellékmondatokban az ige az utolsó helyre kerül. Az alábbiakban bemutatjuk az alapvető szabályokat, példamondatokkal és részletes magyarázattal.
+      </p>
+    </section>
+
+    <section class="example-sentences">
+      <h2>Példamondatok</h2>
+      <ul>
+        <li><strong>Hauptsatz:</strong> "Der Hund läuft im Park." – Az ige a második helyen szerepel.</li>
+        <li><strong>Hauptsatz:</strong> "Ich esse einen Apfel." – Az ige mindig a mondat második pozíciójában van.</li>
+        <li><strong>Nebensatz:</strong> "Weil es regnet, bleibt er zu Hause." – A mellékmondatban az ige a végén található.</li>
+      </ul>
+    </section>
+
+    <section class="extended-explanation">
+      <h2>További magyarázat</h2>
+      <p>
+        A német nyelvben a főmondatban az ige mindig a második elem, függetlenül attól, hogy mi áll az első helyen (például egy időhatározó).
+        Ez a V2-szabály biztosítja, hogy a cselekvés egyértelműen kifejezésre kerüljön. Ha a mondat elején van egy határozó, 
+        az ige még mindig a második pozícióban helyezkedik el, míg a többi mondatrész ezt követi.
+      </p>
+      <p>
+        A mellékmondatokban viszont a német szórend eltér: itt a konjugált ige a mondat végén áll. Ezért, ha egy összetett mondatot alkotsz,
+        a főmondat és a mellékmondat szerkezete jelentősen eltérhet egymástól. Az alábbi példák segítenek megérteni ezt a különbséget.
+      </p>
+      <p>
+        Gyakorold a főmondatok és mellékmondatok közötti különbséget, mert ez alapvető a német nyelvtani struktúrák megértéséhez.
+      </p>
+    </section>
+
+    <!-- Kvíz rész -->
+    <section class="quiz-section">
+      <h2>Kvíz: Mondatszerkesztés és Szórend</h2>
+      <p>
+        A kvíz két részből áll: az első részben 5 feleletválasztós kérdés szerepel, a második részben 5 legördülős kérdés,
+        amelyek segítségével tesztelheted, mennyire érted a német szó sorrendjét.
+      </p>
+      <form id="quizForm">
+        <!-- 5 feleletválasztós kérdés (radio opciók) -->
+        <div class="quiz-question" data-q="1">
+          <p><strong>1) Welcher Satz entspricht der V2-Regel im Hauptsatz?</strong></p>
+          <button type="button" class="option-btn" data-value="der hund läuft im park" onclick="selectAnswer(this, 1)">Der Hund läuft im Park.</button>
+          <button type="button" class="option-btn" data-value="läuft der hund im park" onclick="selectAnswer(this, 1)">Läuft der Hund im Park.</button>
+          <button type="button" class="option-btn" data-value="im park läuft der hund" onclick="selectAnswer(this, 1)">Im Park läuft der Hund.</button>
+          <button type="button" class="option-btn" data-value="der läuft hund im park" onclick="selectAnswer(this, 1)">Der läuft Hund im Park.</button>
+        </div>
+        <div class="quiz-question" data-q="2">
+          <p><strong>2) Welcher Satz ist korrekt formuliert?</strong></p>
+          <button type="button" class="option-btn" data-value="das mädchen liest ein buch" onclick="selectAnswer(this, 2)">Das Mädchen liest ein Buch.</button>
+          <button type="button" class="option-btn" data-value="liest das mädchen ein buch" onclick="selectAnswer(this, 2)">Liest das Mädchen ein Buch.</button>
+          <button type="button" class="option-btn" data-value="ein buch liest das mädchen" onclick="selectAnswer(this, 2)">Ein Buch liest das Mädchen.</button>
+          <button type="button" class="option-btn" data-value="das buch liest das mädchen" onclick="selectAnswer(this, 2)">Das Buch liest das Mädchen.</button>
+        </div>
+        <div class="quiz-question" data-q="3">
+          <p><strong>3) Welcher Satz zeigt die typische Wortstellung im Hauptsatz?</strong></p>
+          <button type="button" class="option-btn" data-value="ich esse einen apfel" onclick="selectAnswer(this, 3)">Ich esse einen Apfel.</button>
+          <button type="button" class="option-btn" data-value="einen apfel esse ich" onclick="selectAnswer(this, 3)">Einen Apfel esse ich.</button>
+          <button type="button" class="option-btn" data-value="ich einen apfel esse" onclick="selectAnswer(this, 3)">Ich einen Apfel esse.</button>
+          <button type="button" class="option-btn" data-value="einen esse ich apfel" onclick="selectAnswer(this, 3)">Einen esse ich Apfel.</button>
+        </div>
+        <div class="quiz-question" data-q="4">
+          <p><strong>4) Welche Satzstellung ist typisch für einen bejahten Hauptsatz?</strong></p>
+          <button type="button" class="option-btn" data-value="er geht nach hause" onclick="selectAnswer(this, 4)">Er geht nach Hause.</button>
+          <button type="button" class="option-btn" data-value="nach hause geht er" onclick="selectAnswer(this, 4)">Nach Hause geht er.</button>
+          <button type="button" class="option-btn" data-value="er nach hause geht" onclick="selectAnswer(this, 4)">Er nach Hause geht.</button>
+          <button type="button" class="option-btn" data-value="geht er nach hause" onclick="selectAnswer(this, 4)">Geht er nach Hause.</button>
+        </div>
+        <div class="quiz-question" data-q="5">
+          <p><strong>5) In welchem Satz steht das konjugierte Verb an der zweiten Stelle?</strong></p>
+          <button type="button" class="option-btn" data-value="er kauft heute ein buch" onclick="selectAnswer(this, 5)">Er kauft heute ein Buch.</button>
+          <button type="button" class="option-btn" data-value="heute kauft er ein buch" onclick="selectAnswer(this, 5)">Heute kauft er ein Buch.</button>
+          <button type="button" class="option-btn" data-value="ein buch kauft er heute" onclick="selectAnswer(this, 5)">Ein Buch kauft er heute.</button>
+          <button type="button" class="option-btn" data-value="kauft er heute ein buch" onclick="selectAnswer(this, 5)">Kauft er heute ein Buch.</button>
+        </div>
+        <!-- Legördülős kérdések -->
+        <div class="quiz-question" data-q="6">
+          <p><strong>6) In einem Hauptsatz steht das konjugierte Verb immer an der ______ Stelle.</strong></p>
+          <select name="dq1">
+            <option value="">--Válassz--</option>
+            <option value="ersten">ersten</option>
+            <option value="zweiten">zweiten</option>
+            <option value="dritten">dritten</option>
+            <option value="letzten">letzten</option>
+          </select>
+        </div>
+        <div class="quiz-question" data-q="7">
+          <p><strong>7) In einem Nebensatz steht das konjugierte Verb oft ______.</strong></p>
+          <select name="dq2">
+            <option value="">--Válassz--</option>
+            <option value="am anfang">am Anfang</option>
+            <option value="in der mitte">in der Mitte</option>
+            <option value="am ende">am Ende</option>
+            <option value="überall">überall</option>
+          </select>
+        </div>
+        <div class="quiz-question" data-q="8">
+          <p><strong>8) Welcher Satz zeigt die richtige Wortstellung in einem Fragesatz?</strong></p>
+          <select name="dq3">
+            <option value="">--Válassz--</option>
+            <option value="geht er heute zur schule?">Geht er heute zur Schule?</option>
+            <option value="heute geht er zur schule?">Heute geht er zur Schule?</option>
+            <option value="zur schule geht er heute?">Zur Schule geht er heute?</option>
+            <option value="schule geht er heute zur?">Schule geht er heute zur?</option>
+          </select>
+        </div>
+        <div class="quiz-question" data-q="9">
+          <p><strong>9) Welche Wortstellung ist typisch für einen bejahten Aussagesatz?</strong></p>
+          <select name="dq4">
+            <option value="">--Válassz--</option>
+            <option value="subjekt – prädikat – objekt">Subjekt – Prädikat – Objekt</option>
+            <option value="prädikat – subjekt – objekt">Prädikat – Subjekt – Objekt</option>
+            <option value="objekt – subjekt – prädikat">Objekt – Subjekt – Prädikat</option>
+            <option value="subjekt – objekt – prädikat">Subjekt – Objekt – Prädikat</option>
+          </select>
+        </div>
+        <div class="quiz-question" data-q="10">
+          <p><strong>10) In einem deutschen Hauptsatz, wenn ein Adverbial am Satzanfang steht, befindet sich das konjugierte Verb üblicherweise an der ______ Stelle.</strong></p>
+          <select name="dq5">
+            <option value="">--Válassz--</option>
+            <option value="ersten">ersten</option>
+            <option value="zweiten">zweiten</option>
+            <option value="dritten">dritten</option>
+            <option value="letzten">letzten</option>
+          </select>
+        </div>
+        
+        <button type="button" onclick="checkQuiz()">Ellenőrzés</button>
+        <button type="button" onclick="resetQuiz()">Válaszok visszaállítása</button>
+        <span id="quizResult" style="margin-left:1em;"></span>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+  
+  <script>
+    // Sötét mód: Local Storage
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+      // Randomizáljuk a radio opciókat
+      randomizeRadioOptions();
+    });
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+    
+    // Segédfüggvény: tömb randomizálása
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    // Randomizáljuk a feleletválasztós kérdések opcióit
+    function randomizeRadioOptions() {
+      const questions = document.querySelectorAll(".quiz-question[data-q]");
+      questions.forEach(q => {
+        const optionButtons = Array.from(q.querySelectorAll(".option-btn"));
+        if (optionButtons.length > 0) {
+          const parent = q;
+          const shuffled = shuffleArray(optionButtons.slice());
+          shuffled.forEach(btn => parent.appendChild(btn));
+        }
+      });
+    }
+    
+    // Globális tömb a kiválasztott válaszok tárolására (5 radio kérdés)
+    const userSelections = Array(5).fill(null);
+    
+    function selectAnswer(button, questionNumber) {
+      const questionDiv = document.querySelector(`.quiz-question[data-q="${questionNumber}"]`);
+      const options = questionDiv.querySelectorAll(".option-btn");
+      options.forEach(opt => opt.classList.remove("selected"));
+      button.classList.add("selected");
+      userSelections[questionNumber - 1] = button.getAttribute("data-value").toLowerCase();
+    }
+    
+    // Helyes válaszok tömbje (10 kérdés, Q1-5: radio, Q6-10: select)
+    const correctQuizAnswers = [
+      "der hund läuft im park",        // Q1 (radio)
+      "das mädchen liest ein buch",     // Q2 (radio)
+      "ich esse einen apfel",            // Q3 (radio)
+      "er geht nach hause",              // Q4 (radio)
+      "er kauft heute ein buch",         // Q5 (radio)
+      "zweiten",                        // Q6 (select)
+      "am ende",                        // Q7 (select)
+      "geht er heute zur schule?",       // Q8 (select) – placeholder option "Geht er heute zur Schule?" (lowercase)
+      "subjekt – prädikat – objekt",      // Q9 (select)
+      "zweiten"                         // Q10 (select)
+    ];
+    
+    function checkQuiz() {
+      let score = 0;
+      // Ellenőrizzük az 5 radio kérdést
+      for (let i = 0; i < 5; i++) {
+        if (userSelections[i] && userSelections[i] === correctQuizAnswers[i]) {
+          score++;
+        }
+      }
+      // Ellenőrizzük a 5 select kérdést
+      for (let i = 6; i <= 10; i++) {
+        const selectElem = document.querySelector('select[name="dq' + (i - 5) + '"]');
+        if (selectElem && selectElem.value.trim().toLowerCase() === correctQuizAnswers[i - 1].toLowerCase()) {
+          score++;
+        }
+      }
+      const resultSpan = document.getElementById("quizResult");
+      if (score === 10) {
+        resultSpan.textContent = "Minden kérdésre helyes választ adtál! Gratulálok!";
+        resultSpan.style.color = "green";
+      } else {
+        resultSpan.textContent = `Helyes válaszaid: ${score} / 10`;
+        resultSpan.style.color = "red";
+      }
+    }
+    
+    function resetQuiz() {
+      // Reset radio kérdések
+      for (let i = 1; i <= 5; i++) {
+        const radios = document.querySelectorAll('input[name="q' + i + '"]');
+        radios.forEach(radio => radio.checked = false);
+      }
+      // Reset select kérdések
+      for (let i = 1; i <= 5; i++) {
+        const selectElem = document.querySelector('select[name="dq' + i + '"]');
+        if (selectElem) {
+          selectElem.value = "";
+        }
+      }
+      // Reset userSelections tömb
+      for (let i = 0; i < 5; i++) {
+        userSelections[i] = null;
+      }
+      const resultSpan = document.getElementById("quizResult");
+      resultSpan.textContent = "";
+      resultSpan.style.color = "";
+      // Újra randomizáljuk a radio opciók sorrendjét
+      randomizeRadioOptions();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – Leckék</title>
+  <meta name="description" content="Válaszd ki a német tanulás leckéit!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px; /* fix navbar miatt */
+      box-sizing: border-box;
+    }
+    /* Fix navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb; /* világos módban */
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    /* Fejléc-kép */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+    /* Sötét mód */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+    /* Lecke kártyák */
+    .lessons-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 2em;
+    }
+    .lesson-card {
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 280px;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 1em;
+    }
+    .lesson-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px 4px 0 0;
+    }
+    .lesson-card h3 {
+      margin: 0.5em 0;
+      font-size: 1.1em;
+    }
+    .lesson-card p {
+      font-size: 0.9em;
+      margin: 0.5em 0;
+    }
+    .lesson-card a {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background-color: #ccc;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 0.5em;
+    }
+    .lesson-card a:hover {
+      background-color: #ddd;
+    }
+    .dark-mode .lesson-card {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #555;
+    }
+    .dark-mode .lesson-card a {
+      background-color: #555;
+      color: #fff;
+    }
+    .dark-mode .lesson-card a:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li><a href="index.html">Leckék</a></li>
+      <li><a href="../szokincs.html">Szókincs</a></li>
+      <li><a href="../gyakorlat.html">Gyakorlatok</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+  
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+  
+  <main>
+    <section>
+      <h1>Leckék</h1>
+      <p>
+        Ebben az oldalon választhatod ki a német tanulás leckéit. Itt megtalálod a különböző témákhoz kapcsolódó leckéket,
+        amelyek segítenek a nyelvtani alapok, a szókincs és a gyakorló feladatok elsajátításában.
+        Kattints a kívánt leckére, hogy mélyebben belemerülj a tananyagba!
+      </p>
+    </section>
+  
+    <!-- Lecke-kártyák (vízszintes lista) -->
+    <section>
+      <h2>Válaszd ki a leckét</h2>
+      <div class="lessons-wrapper">
+        <div class="lesson-card">
+          <img src="../kepek/lesson1.png" alt="Lecke 1: Der / Die / Das" />
+          <h3>Lecke 1: Der / Die / Das</h3>
+          <p>Megtanuljuk a német névelőket.</p>
+          <a href="lesson1.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson2.png" alt="Lecke 2: Alapszókincs" />
+          <h3>Lecke 2: Alapszókincs</h3>
+          <p>30 alap szó és kvíz az alapvető szókincshez.</p>
+          <a href="lesson2.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson3.png" alt="Lecke 3: Egyszerű mondatszerkezetek" />
+          <h3>Lecke 3: Egyszerű mondatszerkezetek</h3>
+          <p>Alap mondatszerkesztés.</p>
+          <a href="lesson3.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson4.png" alt="Lecke 4: Igeragozás" />
+          <h3>Lecke 4: Igeragozás</h3>
+          <p>Az igék ragozása részletesen.</p>
+          <a href="lesson4.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson5.png" alt="Lecke 5: Melléknevek ragozása" />
+          <h3>Lecke 5: Melléknevek ragozása</h3>
+          <p>Melléknevek ragozása és példák.</p>
+          <a href="lesson5.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson6.png" alt="Lecke 6: Mondatszerkesztés és szórend" />
+          <h3>Lecke 6: Mondatszerkesztés és szórend</h3>
+          <p>Helyes szórend és mondatszerkesztés.</p>
+          <a href="lesson6.html" class="btn">Megnyitás</a>
+        </div>
+        <!-- Új lecke kártyák -->
+        <div class="lesson-card">
+          <img src="../kepek/lesson7.png" alt="Lecke 7: Új szókincs" />
+          <h3>Lecke 7: Új szókincs</h3>
+          <p>30 új szó egyedi témakörben.</p>
+          <a href="lesson7.html" class="btn">Megnyitás</a>
+        </div>
+        <div class="lesson-card">
+          <img src="../kepek/lesson8.png" alt="Lecke 8: Új szókincs" />
+          <h3>Lecke 8: Új szókincs</h3>
+          <p>30 új szó más témakörben.</p>
+          <a href="lesson8.html" class="btn">Megnyitás</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+  
+  <script>
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+  </script>
+</body>
+</html>

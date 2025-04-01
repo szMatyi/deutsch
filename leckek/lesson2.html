@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – 2. Lecke: Alapszókincs</title>
+  <meta name="description" content="Második lecke: 30 alapvető német szó (névelővel), plusz kvíz" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (vissza lépés, majd kepek/logo_fav.png) -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+
+      /* Fix navbar + 70 px */
+      padding-top: 70px;
+      box-sizing: border-box;
+    }
+
+    /* Fixen lebegő navbar (felül) */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb; /* világos módban */
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+
+    /* Nagy logó (250 px) */
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+
+    /* Navigációs menü */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0; 
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+
+    /* Gomb stílus */
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+
+    /* Fejléc kép: 100% széles, fix 300 px magas (torzulhat) */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+
+    main {
+      padding: 1em;
+      max-width: 900px; 
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+
+    /* Sötét mód stílusok */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+
+    /* Lista a 30 szónak */
+    ul.word-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1em 0;
+    }
+    ul.word-list li {
+      margin: 0.25em 0;
+    }
+
+    /* Kvíz-lista: user input */
+    .quiz-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .quiz-list li {
+      margin: 0.5em 0;
+    }
+    .quiz-list input[type="text"] {
+      margin-right: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixen lebegő navbar -->
+  <nav class="nav-bar">
+    <!-- Vissza index.html-be, logó a ../kepek/ -ből -->
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Fejléc kép (300 px magas) -->
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+
+  <!-- Fő tartalom -->
+  <main>
+    <section>
+      <h1>2. Lecke: 30 alapvető német szó</h1>
+      <p>
+        Ebben a leckében 30 gyakori, hétköznapi német szót tanulhatsz meg, 
+        mindig a <strong>határozott névelővel</strong> (der/die/das) együtt,
+        hogy később könnyebben ragozhasd őket. 
+      </p>
+    </section>
+
+    <!-- 30 alap szó listája -->
+    <section>
+      <h2>30 alapvető szó (névelővel együtt)</h2>
+      <ul class="word-list">
+        <li><strong>1.</strong> der Tisch (asztal)</li>
+        <li><strong>2.</strong> die Lampe (lámpa)</li>
+        <li><strong>3.</strong> das Buch (könyv)</li>
+        <li><strong>4.</strong> der Stuhl (szék)</li>
+        <li><strong>5.</strong> die Tür (ajtó)</li>
+        <li><strong>6.</strong> das Fenster (ablak)</li>
+        <li><strong>7.</strong> der Hund (kutya)</li>
+        <li><strong>8.</strong> die Katze (macska)</li>
+        <li><strong>9.</strong> das Auto (autó)</li>
+        <li><strong>10.</strong> der Baum (fa)</li>
+        <li><strong>11.</strong> die Blume (virág)</li>
+        <li><strong>12.</strong> das Haus (ház)</li>
+        <li><strong>13.</strong> der Tag (nap [idő])</li>
+        <li><strong>14.</strong> die Nacht (éjszaka)</li>
+        <li><strong>15.</strong> das Kind (gyerek)</li>
+        <li><strong>16.</strong> der Mann (férfi)</li>
+        <li><strong>17.</strong> die Frau (nő)</li>
+        <li><strong>18.</strong> das Wasser (víz)</li>
+        <li><strong>19.</strong> der Schuh (cipő)</li>
+        <li><strong>20.</strong> die Jacke (kabát/dzseki)</li>
+        <li><strong>21.</strong> das Handy (mobiltelefon)</li>
+        <li><strong>22.</strong> der Computer (számítógép)</li>
+        <li><strong>23.</strong> die Maus (egér)</li>
+        <li><strong>24.</strong> das Geld (pénz)</li>
+        <li><strong>25.</strong> der Bus (busz)</li>
+        <li><strong>26.</strong> die Straße (utca)</li>
+        <li><strong>27.</strong> das Bier (sör)</li>
+        <li><strong>28.</strong> der Kuchen (sütemény)</li>
+        <li><strong>29.</strong> die Zeit (idő)</li>
+        <li><strong>30.</strong> das Licht (fény)</li>
+      </ul>
+      <p>
+        Ezeket a szavakat a névelőjükkel együtt javasolt megtanulni. 
+        Alább kipróbálhatod magad egy kvízzel!
+      </p>
+    </section>
+
+    <!-- Kvíz (30 sor: cikk + szó) -->
+    <section>
+      <h2>Kvíz: Írd be a névelőt és a szót!</h2>
+      <p>
+        A magyar jelentés alapján add meg a <strong>határozott névelőt</strong> (der/die/das) 
+        és a <strong>német szót</strong> (pl. Tisch, Lampe, stb.)! 
+      </p>
+
+      <form id="big-quiz-form">
+        <ul class="quiz-list">
+          <li>1) asztal:
+            <input type="text" name="item1_article" size="4" placeholder="névelő" />
+            <input type="text" name="item1_word" size="10" placeholder="német szó" />
+          </li>
+          <li>2) lámpa:
+            <input type="text" name="item2_article" size="4" />
+            <input type="text" name="item2_word" size="10" />
+          </li>
+          <li>3) könyv:
+            <input type="text" name="item3_article" size="4" />
+            <input type="text" name="item3_word" size="10" />
+          </li>
+          <li>4) szék:
+            <input type="text" name="item4_article" size="4" />
+            <input type="text" name="item4_word" size="10" />
+          </li>
+          <li>5) ajtó:
+            <input type="text" name="item5_article" size="4" />
+            <input type="text" name="item5_word" size="10" />
+          </li>
+          <li>6) ablak:
+            <input type="text" name="item6_article" size="4" />
+            <input type="text" name="item6_word" size="10" />
+          </li>
+          <li>7) kutya:
+            <input type="text" name="item7_article" size="4" />
+            <input type="text" name="item7_word" size="10" />
+          </li>
+          <li>8) macska:
+            <input type="text" name="item8_article" size="4" />
+            <input type="text" name="item8_word" size="10" />
+          </li>
+          <li>9) autó:
+            <input type="text" name="item9_article" size="4" />
+            <input type="text" name="item9_word" size="10" />
+          </li>
+          <li>10) fa:
+            <input type="text" name="item10_article" size="4" />
+            <input type="text" name="item10_word" size="10" />
+          </li>
+          <li>11) virág:
+            <input type="text" name="item11_article" size="4" />
+            <input type="text" name="item11_word" size="10" />
+          </li>
+          <li>12) ház:
+            <input type="text" name="item12_article" size="4" />
+            <input type="text" name="item12_word" size="10" />
+          </li>
+          <li>13) nap (idő):
+            <input type="text" name="item13_article" size="4" />
+            <input type="text" name="item13_word" size="10" />
+          </li>
+          <li>14) éjszaka:
+            <input type="text" name="item14_article" size="4" />
+            <input type="text" name="item14_word" size="10" />
+          </li>
+          <li>15) gyerek:
+            <input type="text" name="item15_article" size="4" />
+            <input type="text" name="item15_word" size="10" />
+          </li>
+          <li>16) férfi:
+            <input type="text" name="item16_article" size="4" />
+            <input type="text" name="item16_word" size="10" />
+          </li>
+          <li>17) nő:
+            <input type="text" name="item17_article" size="4" />
+            <input type="text" name="item17_word" size="10" />
+          </li>
+          <li>18) víz:
+            <input type="text" name="item18_article" size="4" />
+            <input type="text" name="item18_word" size="10" />
+          </li>
+          <li>19) cipő:
+            <input type="text" name="item19_article" size="4" />
+            <input type="text" name="item19_word" size="10" />
+          </li>
+          <li>20) kabát/dzseki:
+            <input type="text" name="item20_article" size="4" />
+            <input type="text" name="item20_word" size="10" />
+          </li>
+          <li>21) mobiltelefon:
+            <input type="text" name="item21_article" size="4" />
+            <input type="text" name="item21_word" size="10" />
+          </li>
+          <li>22) számítógép:
+            <input type="text" name="item22_article" size="4" />
+            <input type="text" name="item22_word" size="10" />
+          </li>
+          <li>23) egér:
+            <input type="text" name="item23_article" size="4" />
+            <input type="text" name="item23_word" size="10" />
+          </li>
+          <li>24) pénz:
+            <input type="text" name="item24_article" size="4" />
+            <input type="text" name="item24_word" size="10" />
+          </li>
+          <li>25) busz:
+            <input type="text" name="item25_article" size="4" />
+            <input type="text" name="item25_word" size="10" />
+          </li>
+          <li>26) utca:
+            <input type="text" name="item26_article" size="4" />
+            <input type="text" name="item26_word" size="10" />
+          </li>
+          <li>27) sör:
+            <input type="text" name="item27_article" size="4" />
+            <input type="text" name="item27_word" size="10" />
+          </li>
+          <li>28) sütemény:
+            <input type="text" name="item28_article" size="4" />
+            <input type="text" name="item28_word" size="10" />
+          </li>
+          <li>29) idő:
+            <input type="text" name="item29_article" size="4" />
+            <input type="text" name="item29_word" size="10" />
+          </li>
+          <li>30) fény:
+            <input type="text" name="item30_article" size="4" />
+            <input type="text" name="item30_word" size="10" />
+          </li>
+        </ul>
+        <button type="button" onclick="checkListQuiz()">Ellenőrzés</button>
+        <button type="button" onclick="resetListQuiz()">Újrakezdés</button>
+        <span id="quiz-result" style="margin-left:1em;"></span>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+
+  <script>
+    // Sötét mód (Local Storage)
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+
+    // Mind a 30 helyes cikk + szó (article, word)
+    const correctAnswers = [
+      ["der","Tisch"],
+      ["die","Lampe"],
+      ["das","Buch"],
+      ["der","Stuhl"],
+      ["die","Tür"],
+      ["das","Fenster"],
+      ["der","Hund"],
+      ["die","Katze"],
+      ["das","Auto"],
+      ["der","Baum"],
+      ["die","Blume"],
+      ["das","Haus"],
+      ["der","Tag"],
+      ["die","Nacht"],
+      ["das","Kind"],
+      ["der","Mann"],
+      ["die","Frau"],
+      ["das","Wasser"],
+      ["der","Schuh"],
+      ["die","Jacke"],
+      ["das","Handy"],
+      ["der","Computer"],
+      ["die","Maus"],
+      ["das","Geld"],
+      ["der","Bus"],
+      ["die","Straße"],
+      ["das","Bier"],
+      ["der","Kuchen"],
+      ["die","Zeit"],
+      ["das","Licht"]
+    ];
+
+    function checkListQuiz() {
+      const form = document.getElementById("big-quiz-form");
+      let score = 0;
+
+      for (let i = 1; i <= 30; i++) {
+        const articleInput = form.elements[`item${i}_article`].value.trim().toLowerCase();
+        const wordInput    = form.elements[`item${i}_word`].value.trim();
+        
+        // Helyes cikk+szó
+        const [corrArt, corrWord] = correctAnswers[i-1];
+        
+        const isArtOk  = (articleInput === corrArt.toLowerCase());
+        // A német szó összehasonlításnál pl. lowerCase -tel is engedhetjük
+        const isWordOk = (wordInput.toLowerCase() === corrWord.toLowerCase());
+
+        if (isArtOk && isWordOk) {
+          form.elements[`item${i}_article`].style.border = "2px solid green";
+          form.elements[`item${i}_word`].style.border = "2px solid green";
+          score++;
+        } else {
+          form.elements[`item${i}_article`].style.border = "2px solid red";
+          form.elements[`item${i}_word`].style.border   = "2px solid red";
+        }
+      }
+
+      const resultSpan = document.getElementById("quiz-result");
+      if (score === 30) {
+        resultSpan.textContent = "Minden helyes! Gratulálok!";
+        resultSpan.style.color = "green";
+      } else {
+        resultSpan.textContent = `Helyes válaszaid: ${score} / 30`;
+        resultSpan.style.color = "red";
+      }
+    }
+
+    function resetListQuiz() {
+      const form = document.getElementById("big-quiz-form");
+      for (let i = 1; i <= 30; i++) {
+        form.elements[`item${i}_article`].value = "";
+        form.elements[`item${i}_word`].value = "";
+        form.elements[`item${i}_article`].style.border = "1px solid #999";
+        form.elements[`item${i}_word`].style.border   = "1px solid #999";
+      }
+      const resultSpan = document.getElementById("quiz-result");
+      resultSpan.textContent = "";
+      resultSpan.style.color = "";
+    }
+  </script>
+</body>
+</html>

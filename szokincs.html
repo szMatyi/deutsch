@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – Szókincs</title>
+  <meta name="description" content="Válaszd ki a német szókincs oldalakat és bővítsd a szókincsedet!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon a kepek/ mappából -->
+  <link rel="icon" type="image/png" sizes="any" href="kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px; /* fix navbar miatt */
+      box-sizing: border-box;
+    }
+    /* Fix navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    /* Fejléc-kép */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+    /* Sötét mód */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+    /* Szókincs kártyák */
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 2em;
+    }
+    .card {
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 280px;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 1em;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px 4px 0 0;
+    }
+    .card h3 {
+      margin: 0.5em 0;
+      font-size: 1.1em;
+    }
+    .card p {
+      font-size: 0.9em;
+      margin: 0.5em 0;
+    }
+    .card a {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background-color: #ccc;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 0.5em;
+    }
+    .card a:hover {
+      background-color: #ddd;
+    }
+    .dark-mode .card {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #555;
+    }
+    .dark-mode .card a {
+      background-color: #555;
+      color: #fff;
+    }
+    .dark-mode .card a:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <a href="index.html">
+      <img src="kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="leckek/index.html">Nyelvtani Alapok</a></li>
+      <li><a href="szokincs.html" style="font-weight: bold;">Szókincs</a></li>
+      <li><a href="gyakorlat.html">Gyakorlatok</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- Fejléc-kép -->
+  <header>
+    <img src="kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+  
+  <main>
+    <section>
+      <h1>Szókincs</h1>
+      <p>
+        Válaszd ki az alábbi szókincset érintő oldalakat, hogy bővítsd a német szókincsedet! Itt különböző témákhoz kapcsolódó
+        leckéket találsz, amelyek segítenek megismerni az adott területre jellemző szavakat.
+      </p>
+    </section>
+    
+    <!-- Kártyák listája -->
+    <section class="cards-wrapper">
+      <div class="card">
+        <img src="kepek/lesson2.png" alt="Szókincs Alapok" />
+        <h3>Szókincs Alapok</h3>
+        <p>30 alap szó és kvíz az alapvető szókincshez.</p>
+        <a href="leckek/lesson2.html">Megnyitás</a>
+      </div>
+      <div class="card">
+        <img src="kepek/lesson7.png" alt="Szókincs – Új szavak" />
+        <h3>Szókincs – Új szavak</h3>
+        <p>Bővítsd a szókincsedet 30 új szóval, más témakörből.</p>
+        <a href="leckek/lesson7.html">Megnyitás</a>
+      </div>
+      <div class="card">
+        <img src="kepek/lesson8.png" alt="Szókincs – Új szavak 2" />
+        <h3>Szókincs – Új szavak 2</h3>
+        <p>Ismerj meg további 30 alapvető szót.</p>
+        <a href="leckek/lesson8.html">Megnyitás</a>
+      </div>
+      <!-- Ha szükséges további kártyák... -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+  
+  <script>
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+  </script>
+</body>
+</html>

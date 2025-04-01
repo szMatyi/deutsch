@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – 4. Lecke: Igeragozás</title>
+  <meta name="description" content="Ebben a leckében az igeragozás alapjait mutatjuk be, majd egy kvíz segítségével tesztelheted tudásodat." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (../kepek/logo_fav.png) -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px;
+      box-sizing: border-box;
+    }
+    /* Fix navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    /* Fejléc-kép */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+    /* Sötét mód */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+    /* Igeragozás táblázat */
+    .conjugation-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .conjugation-table, .conjugation-table th, .conjugation-table td {
+      border: 1px solid #999;
+    }
+    .conjugation-table th, .conjugation-table td {
+      padding: 0.5em;
+      text-align: center;
+    }
+    /* Kvíz stílusok */
+    .quiz-section {
+      margin-top: 2em;
+    }
+    .quiz-question {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .quiz-question p {
+      margin: 0.5em 0;
+    }
+    .option-btn {
+      margin: 0.25em;
+      padding: 0.5em 1em;
+      border: 1px solid #999;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .option-btn.selected {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li><a href="index.html">Leckék</a></li>
+      <li><a href="#">Szókincs</a></li>
+      <li><a href="#">Gyakorlatok</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Fejléc-kép -->
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+
+  <main>
+    <section>
+      <h1>4. Lecke: Igeragozás</h1>
+      <p>
+        Ebben a leckében megismerkedhetsz a német igék ragozásának alapjaival. A szabályos igék ragozása általában egy mintát követ:
+        az ige gyökére különböző végződéseket ragasztunk a személyi névmásokhoz. Példaként nézd meg a <strong>spielen</strong> (játszani)
+        ige jelen idejű ragozását az alábbi táblázatban.
+      </p>
+    </section>
+
+    <section>
+      <h2>Bevezetés az igeragozásba</h2>
+      <table class="conjugation-table">
+        <thead>
+          <tr>
+            <th>Személy</th>
+            <th>Jelen idő</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ich</td>
+            <td>spiele</td>
+          </tr>
+          <tr>
+            <td>du</td>
+            <td>spielst</td>
+          </tr>
+          <tr>
+            <td>er/sie/es</td>
+            <td>spielt</td>
+          </tr>
+          <tr>
+            <td>wir</td>
+            <td>spielen</td>
+          </tr>
+          <tr>
+            <td>ihr</td>
+            <td>spielt</td>
+          </tr>
+          <tr>
+            <td>sie/Sie</td>
+            <td>spielen</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        A fenti táblázat segít megérteni, hogy a szabályos igék ragozása személytől függően változik. Ez az alapja annak, hogy a mondatban 
+        egyértelműen kifejezzük a cselekvés idejét és végrehajtóját.
+      </p>
+    </section>
+
+    <section>
+      <h2>Példamondatok és további magyarázat</h2>
+      <ul>
+        <li><strong>Ich spiele Fußball.</strong> – Én focizom.</li>
+        <li><strong>Du spielst Tennis.</strong> – Te teniszezel.</li>
+        <li><strong>Er spielt Klavier.</strong> – Ő zongorázik.</li>
+        <li><strong>Wir spielen zusammen.</strong> – Mi együtt játszunk.</li>
+        <li><strong>Ihr spielt sehr gut.</strong> – Ti nagyon jól játszotok.</li>
+        <li><strong>Sie spielen jeden Tag.</strong> – Ők minden nap játszanak.</li>
+      </ul>
+      <p>
+        Fontos, hogy az igék ragozását ne csak mechanikusan, hanem a kontextusban is megértsd. Ha megtanulod a szabályos igék ragozását, 
+        könnyebben fogsz tudni összetett mondatokat alkotni, és magabiztosan kommunikálni németül.
+      </p>
+    </section>
+
+    <!-- Kvíz: 10 feleletválasztós kérdés, véletlenszerű sorrendű opciókkal -->
+    <section class="quiz-section">
+      <h2>Kvíz: Igeragozás</h2>
+      <p>
+        Válaszd ki a helyes választ az alábbi 10 kérdésre! Minden kérdésnél 4 opció közül választhatsz, és az opciók 
+        véletlenszerű sorrendben jelennek meg, így a helyes válasz nem mindig az első.
+      </p>
+      <form id="quizForm">
+        <!-- 10 feleletválasztós kérdés -->
+        <div class="quiz-question" data-q="1">
+          <p><strong>1) "Ich ______ gerne Klavier."</strong></p>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 1)">spiele</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 1)">spielst</button>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 1)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 1)">spielen</button>
+        </div>
+        <div class="quiz-question" data-q="2">
+          <p><strong>2) "Du ______ sehr gut Tennis."</strong></p>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 2)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 2)">spiele</button>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 2)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 2)">spielen</button>
+        </div>
+        <div class="quiz-question" data-q="3">
+          <p><strong>3) "Er ______ immer in der Schule."</strong></p>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 3)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 3)">spielst</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 3)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielte" onclick="selectAnswer(this, 3)">spielte</button>
+        </div>
+        <div class="quiz-question" data-q="4">
+          <p><strong>4) "Wir ______ jeden Tag zusammen."</strong></p>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 4)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 4)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 4)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 4)">spiele</button>
+        </div>
+        <div class="quiz-question" data-q="5">
+          <p><strong>5) "Ihr ______ sehr schnell."</strong></p>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 5)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 5)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 5)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 5)">spiele</button>
+        </div>
+        <div class="quiz-question" data-q="6">
+          <p><strong>6) "Sie ______ jeden Abend Fußball."</strong></p>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 6)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 6)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 6)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 6)">spiele</button>
+        </div>
+        <div class="quiz-question" data-q="7">
+          <p><strong>7) "Was ______ du normalerweise?"</strong></p>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 7)">spielst</button>
+          <button type="button" class="option-btn" data-value="spielst du" onclick="selectAnswer(this, 7)">spielst du</button>
+          <button type="button" class="option-btn" data-value="spielst du oft" onclick="selectAnswer(this, 7)">spielst du oft</button>
+          <button type="button" class="option-btn" data-value="spielstet" onclick="selectAnswer(this, 7)">spielstet</button>
+        </div>
+        <div class="quiz-question" data-q="8">
+          <p><strong>8) "Er ______ am Wochenende oft Basketball."</strong></p>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 8)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 8)">spielst</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 8)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielte" onclick="selectAnswer(this, 8)">spielte</button>
+        </div>
+        <div class="quiz-question" data-q="9">
+          <p><strong>9) "Wir ______ zusammen am Samstag."</strong></p>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 9)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 9)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 9)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 9)">spiele</button>
+        </div>
+        <div class="quiz-question" data-q="10">
+          <p><strong>10) "Ihr ______ immer zusammen, wenn ihr Zeit habt."</strong></p>
+          <button type="button" class="option-btn" data-value="spielt" onclick="selectAnswer(this, 10)">spielt</button>
+          <button type="button" class="option-btn" data-value="spielen" onclick="selectAnswer(this, 10)">spielen</button>
+          <button type="button" class="option-btn" data-value="spielst" onclick="selectAnswer(this, 10)">spielst</button>
+          <button type="button" class="option-btn" data-value="spiele" onclick="selectAnswer(this, 10)">spiele</button>
+        </div>
+        
+        <button type="button" onclick="checkQuiz()">Ellenőrzés</button>
+        <button type="button" onclick="resetQuiz()">Válaszok visszaállítása</button>
+        <span id="quizResult" style="margin-left:1em;"></span>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+  
+  <script>
+    // Sötét mód: Local Storage
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+      // Randomizáljuk a radio opciókat
+      randomizeRadioOptions();
+    });
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+    
+    // Segédfüggvény: tömb randomizálása
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    // Randomizáljuk a feleletválasztós kérdések opcióit
+    function randomizeRadioOptions() {
+      const questions = document.querySelectorAll(".quiz-question[data-q]");
+      questions.forEach(q => {
+        const optionButtons = Array.from(q.querySelectorAll(".option-btn"));
+        if (optionButtons.length > 0) {
+          const parent = q;
+          const shuffled = shuffleArray(optionButtons.slice());
+          shuffled.forEach(btn => parent.appendChild(btn));
+        }
+      });
+    }
+    
+    // Globális tömb a kiválasztott válaszok tárolására (10 kérdés)
+    const userSelections = Array(10).fill(null);
+    
+    function selectAnswer(button, questionNumber) {
+      const questionDiv = document.querySelector(`.quiz-question[data-q="${questionNumber}"]`);
+      const options = questionDiv.querySelectorAll(".option-btn");
+      options.forEach(opt => opt.classList.remove("selected"));
+      button.classList.add("selected");
+      userSelections[questionNumber - 1] = button.getAttribute("data-value").toLowerCase();
+    }
+    
+    // Helyes válaszok tömbje (10 elem)
+    const correctQuizAnswers = [
+      "spiele",         // Q1
+      "spielst",        // Q2
+      "spielt",         // Q3
+      "spielen",        // Q4
+      "spielt",         // Q5
+      "spielen",        // Q6 (Sie spielen jeden Abend Fußball.)
+      "spielst",        // Q7 (Was spielst du normalerweise?)
+      "spielt",         // Q8 (Er spielt am Wochenende oft Basketball.)
+      "spielen",        // Q9 (Wir spielen zusammen am Samstag.)
+      "spielt"          // Q10 (Ihr spielt immer zusammen, wenn ihr Zeit habt.)
+    ];
+    
+    function checkQuiz() {
+      let score = 0;
+      for (let i = 0; i < 10; i++) {
+        if (userSelections[i] && userSelections[i] === correctQuizAnswers[i]) {
+          score++;
+        }
+      }
+      const resultSpan = document.getElementById("quizResult");
+      if (score === 10) {
+        resultSpan.textContent = "Minden kérdésre helyes választ adtál! Gratulálok!";
+        resultSpan.style.color = "green";
+      } else {
+        resultSpan.textContent = `Helyes válaszaid: ${score} / 10`;
+        resultSpan.style.color = "red";
+      }
+    }
+    
+    function resetQuiz() {
+      for (let i = 1; i <= 10; i++) {
+        const radios = document.querySelectorAll('input[name="q' + i + '"]');
+        radios.forEach(radio => radio.checked = false);
+      }
+      for (let i = 0; i < 10; i++) {
+        userSelections[i] = null;
+      }
+      const resultSpan = document.getElementById("quizResult");
+      resultSpan.textContent = "";
+      resultSpan.style.color = "";
+      
+      // Újra randomizáljuk az opciók sorrendjét
+      randomizeRadioOptions();
+    }
+  </script>
+</body>
+</html>

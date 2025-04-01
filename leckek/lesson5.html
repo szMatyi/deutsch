@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – 5. Lecke: Melléknevek ragozása</title>
+  <meta name="description" content="Ebben a leckében a melléknevek ragozását mutatjuk be részletes magyarázattal és kvízzel." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (../kepek/logo_fav.png) -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px;
+      box-sizing: border-box;
+    }
+    /* Fix navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    /* Fejléc-kép */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+    /* Sötét mód */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+    /* Melléknevek ragozás táblázata (példa: szabályos igékhez hasonlóan) */
+    .adjective-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .adjective-table, .adjective-table th, .adjective-table td {
+      border: 1px solid #999;
+    }
+    .adjective-table th, .adjective-table td {
+      padding: 0.5em;
+      text-align: center;
+    }
+    /* Kvíz stílusok */
+    .quiz-section {
+      margin-top: 2em;
+    }
+    .quiz-question {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .quiz-question p {
+      margin: 0.5em 0;
+    }
+    .option-btn {
+      margin: 0.25em;
+      padding: 0.5em 1em;
+      border: 1px solid #999;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .option-btn.selected {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li><a href="index.html">Leckék</a></li>
+      <li><a href="#">Szókincs</a></li>
+      <li><a href="#">Gyakorlatok</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Fejléc-kép -->
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+
+  <main>
+    <section>
+      <h1>5. Lecke: Melléknevek ragozása</h1>
+      <p>
+        Ebben a leckében a melléknevek ragozásának alapjait mutatjuk be. A melléknevek ragozása a német nyelvben azért különösen fontos,
+        mert a melléknevek helyes alakja segít egyértelművé tenni, hogy melyik főnév melyik tulajdonságát írjuk le.
+        Két alapvető ragozási mintát különböztetünk meg: a <strong>erős</strong> és a <strong>gyenge</strong> ragozást.
+      </p>
+    </section>
+
+    <section>
+      <h2>Erős és gyenge ragozás</h2>
+      <p>
+        Ha a melléknév egy határozatlan névelő vagy egyéb névelő nélkül áll, akkor az erős ragozást használjuk.
+        Ha viszont határozott névelő (die, der, das) vagy más bizonyos esetben szerepel, akkor a gyenge ragozás érvényesül.
+      </p>
+      <table class="adjective-table">
+        <thead>
+          <tr>
+            <th>Eset</th>
+            <th>Erős ragozás</th>
+            <th>Gyenge ragozás</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nominativ, hímnem</td>
+            <td>ein <strong>schöner</strong> Tag</td>
+            <td>der <strong>schöne</strong> Tag</td>
+          </tr>
+          <tr>
+            <td>Akkusativ, hímnem</td>
+            <td>einen <strong>schönen</strong> Tag</td>
+            <td>den <strong>schönen</strong> Tag</td>
+          </tr>
+          <tr>
+            <td>Nominativ, neuter</td>
+            <td>ein <strong>schönes</strong> Auto</td>
+            <td>das <strong>schöne</strong> Auto</td>
+          </tr>
+          <tr>
+            <td>Akkusativ, neuter</td>
+            <td>ein <strong>schönes</strong> Auto</td>
+            <td>das <strong>schöne</strong> Auto</td>
+          </tr>
+          <tr>
+            <td>Nominativ, nőnem</td>
+            <td>eine <strong>schöne</strong> Blume</td>
+            <td>die <strong>schöne</strong> Blume</td>
+          </tr>
+          <tr>
+            <td>Akkusativ, nőnem</td>
+            <td>eine <strong>schöne</strong> Blume</td>
+            <td>die <strong>schöne</strong> Blume</td>
+          </tr>
+          <tr>
+            <td>Nominativ, többes</td>
+            <td>keine <strong>schönen</strong> Bücher</td>
+            <td>die <strong>schönen</strong> Bücher</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Az erős és gyenge ragozás közötti különbség abból adódik, hogy a határozott névelő már hordoz információt a főnév neméről és esetéről,
+        ezért a melléknév végződése enyhébb. Ezzel szemben határozatlan esetben az erős végződés segítségével egyértelműbbé válik a mondat jelentése.
+      </p>
+    </section>
+
+    <section>
+      <h2>Példamondatok</h2>
+      <ul>
+        <li><strong>Erős ragozás:</strong> "Das ist ein <em>schönes</em> Auto."</li>
+        <li><strong>Gyenge ragozás:</strong> "Das ist das <em>schöne</em> Auto."</li>
+        <li><strong>Erős ragozás:</strong> "Ich habe einen <em>schönen</em> Tag."</li>
+        <li><strong>Gyenge ragozás:</strong> "Das ist der <em>schöne</em> Tag."</li>
+      </ul>
+      <p>
+        Ezek a példák mutatják, hogyan változik a melléknév alakja attól függően, hogy határozott vagy határozatlan névelővel áll-e a főnév.
+        Gyakorold ezeket a szerkezeteket, mert a melléknevek helyes ragozása elengedhetetlen a pontos kifejezéshez a német nyelvben.
+      </p>
+    </section>
+
+    <!-- Kvíz rész -->
+    <section class="quiz-section">
+      <h2>Kvíz: Melléknevek ragozása</h2>
+      <p>
+        A kvíz két részből áll: az első részben 5 feleletválasztós kérdés szerepel, a második részben pedig 5 legördülős kérdés.
+        Válaszd ki a számodra helyes választ az egyes kérdésekre, majd kattints az <strong>Ellenőrzés</strong> gombra!
+      </p>
+      <form id="quizForm">
+        <!-- Feleletválasztós kérdések -->
+        <div class="quiz-question" data-q="1">
+          <p><strong>1) "Ich sehe einen ______ Mann."</strong></p>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 1)">schöner</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 1)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 1)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 1)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="2">
+          <p><strong>2) "Wir haben einen ______ Tag."</strong></p>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 2)">schöner</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 2)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 2)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 2)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="3">
+          <p><strong>3) "Ich trinke eine ______ Tasse Kaffee."</strong></p>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 3)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 3)">schöner</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 3)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 3)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="4">
+          <p><strong>4) "Das ist ein ______ Auto."</strong></p>
+          <button type="button" class="option-btn" data-value="schönes" onclick="selectAnswer(this, 4)">schönes</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 4)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 4)">schöne</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 4)">schönen</button>
+        </div>
+        <div class="quiz-question" data-q="5">
+          <p><strong>5) "Die ______ Blumen sind sehr bunt."</strong></p>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 5)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 5)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 5)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 5)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="6">
+          <p><strong>6) "Er hat ein ______ Haus."</strong></p>
+          <button type="button" class="option-btn" data-value="schönes" onclick="selectAnswer(this, 6)">schönes</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 6)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 6)">schöne</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 6)">schönen</button>
+        </div>
+        <div class="quiz-question" data-q="7">
+          <p><strong>7) "Ich mag ______ Musik."</strong></p>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 7)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 7)">schöner</button>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 7)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 7)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="8">
+          <p><strong>8) "Wir essen in einem ______ Restaurant."</strong></p>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 8)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 8)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 8)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 8)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="9">
+          <p><strong>9) "Die ______ Kinder spielen im Garten."</strong></p>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 9)">schönen</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 9)">schöne</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 9)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöneren" onclick="selectAnswer(this, 9)">schöneren</button>
+        </div>
+        <div class="quiz-question" data-q="10">
+          <p><strong>10) "Sie liest in einem ______ Buch."</strong></p>
+          <button type="button" class="option-btn" data-value="schönen" onclick="selectAnswer(this, 10)">schönen</button>
+          <button type="button" class="option-btn" data-value="schönes" onclick="selectAnswer(this, 10)">schönes</button>
+          <button type="button" class="option-btn" data-value="schöner" onclick="selectAnswer(this, 10)">schöner</button>
+          <button type="button" class="option-btn" data-value="schöne" onclick="selectAnswer(this, 10)">schöne</button>
+        </div>
+        
+        <button type="button" onclick="checkQuiz()">Ellenőrzés</button>
+        <button type="button" onclick="resetQuiz()">Válaszok visszaállítása</button>
+        <span id="quizResult" style="margin-left:1em;"></span>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+  
+  <script>
+    // Sötét mód: Local Storage
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+      // Randomizáljuk a feleletválasztós opciókat
+      randomizeRadioOptions();
+    });
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+    
+    // Segédfüggvény a tömb randomizálásához
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    // Randomizáljuk a feleletválasztós kérdések opcióit
+    function randomizeRadioOptions() {
+      const questions = document.querySelectorAll(".quiz-question[data-q]");
+      questions.forEach(q => {
+        const optionButtons = Array.from(q.querySelectorAll(".option-btn"));
+        if (optionButtons.length > 0) {
+          const parent = q;
+          const shuffled = shuffleArray(optionButtons.slice());
+          shuffled.forEach(btn => parent.appendChild(btn));
+        }
+      });
+    }
+    
+    // Globális tömb a kiválasztott válaszok tárolására (10 kérdés)
+    const userSelections = Array(10).fill(null);
+    
+    function selectAnswer(button, questionNumber) {
+      const questionDiv = document.querySelector(`.quiz-question[data-q="${questionNumber}"]`);
+      const options = questionDiv.querySelectorAll(".option-btn");
+      options.forEach(opt => opt.classList.remove("selected"));
+      button.classList.add("selected");
+      userSelections[questionNumber - 1] = button.getAttribute("data-value").toLowerCase();
+    }
+    
+    // Helyes válaszok tömbje (10 elem)
+    const correctQuizAnswers = [
+      "schönen",   // Q1: Ich sehe einen ______ Mann.
+      "schönen",   // Q2: Wir haben einen ______ Tag.
+      "schöne",    // Q3: Ich trinke eine ______ Tasse Kaffee.
+      "schönes",   // Q4: Das ist ein ______ Auto.
+      "schönen",   // Q5: Die ______ Blumen sind sehr bunt.
+      "schönes",   // Q6: Er hat ein ______ Haus.
+      "schöne",    // Q7: Ich mag ______ Musik.
+      "schönen",   // Q8: Wir essen in einem ______ Restaurant.
+      "schönen",   // Q9: Die ______ Kinder spielen im Garten.
+      "schönen"    // Q10: Sie liest in einem ______ Buch.
+    ];
+    
+    function checkQuiz() {
+      let score = 0;
+      for (let i = 0; i < 10; i++) {
+        if (userSelections[i] && userSelections[i] === correctQuizAnswers[i]) {
+          score++;
+        }
+      }
+      const resultSpan = document.getElementById("quizResult");
+      if (score === 10) {
+        resultSpan.textContent = "Minden kérdésre helyes választ adtál! Gratulálok!";
+        resultSpan.style.color = "green";
+      } else {
+        resultSpan.textContent = `Helyes válaszaid: ${score} / 10`;
+        resultSpan.style.color = "red";
+      }
+    }
+    
+    function resetQuiz() {
+      // Reset feleletválasztós kérdések
+      for (let i = 1; i <= 5; i++) {
+        const radios = document.querySelectorAll('input[name="q' + i + '"]');
+        radios.forEach(radio => radio.checked = false);
+      }
+      // Reset legördülős kérdések
+      for (let i = 1; i <= 5; i++) {
+        const selectElem = document.querySelector('select[name="dq' + i + '"]');
+        if (selectElem) {
+          selectElem.value = "";
+        }
+      }
+      // Reset userSelections tömb
+      for (let i = 0; i < 10; i++) {
+        userSelections[i] = null;
+      }
+      const resultSpan = document.getElementById("quizResult");
+      resultSpan.textContent = "";
+      resultSpan.style.color = "";
+      
+      // Újra randomizáljuk a radio opciók sorrendjét
+      randomizeRadioOptions();
+    }
+  </script>
+</body>
+</html>

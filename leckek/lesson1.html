@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Német Tanulás – 1. Lecke: Der/Die/Das</title>
+  <meta name="description" content="Első lecke: Német névelők (der, die, das) különböző nyelvtani esetekben" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (a leckék mappából visszalépve kepek/ mappába) -->
+  <link rel="icon" type="image/png" sizes="any" href="../kepek/logo_fav.png" />
+
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --header-footer-bg: #f2f2f2;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      padding-top: 70px; /* fix navbar miatt */
+      box-sizing: border-box;
+    }
+
+    /* Fixen lebegő navbar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #bbb;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    .logo {
+      height: 250px;
+      width: auto;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-menu li {
+      margin-left: 1em;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      color: #666;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      background-color: #ccc;
+      color: #333;
+      margin-left: 0.5em;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+
+    /* Fejléc-kép: 100% szélesség, fix 300px magasság */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+      /* A kép torzulhat, mert nincs object-fit */
+    }
+
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: var(--header-footer-bg);
+      padding: 1em;
+      text-align: center;
+    }
+
+    /* Sötét mód stílusok */
+    .dark-mode {
+      --background-color: #2b2b2b;
+      --text-color: #ffffff;
+      --header-footer-bg: #3a3a3a;
+    }
+    .dark-mode .nav-bar {
+      background-color: #444;
+      color: #eee;
+    }
+    .dark-mode .nav-menu a {
+      color: #eee;
+    }
+    .dark-mode .nav-menu a:hover {
+      color: #ccc;
+    }
+    .dark-mode button {
+      background-color: #555;
+      color: #fff;
+    }
+
+    /* Táblázat stílusok */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    table, th, td {
+      border: 1px solid #999;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: center;
+    }
+    input {
+      width: 60px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="../kepek/logo.png" alt="Német Tanulás logó" class="logo" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Főoldal</a></li>
+      <li>
+        <button onclick="toggleDarkMode()">Sötét mód váltása</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Fejléc-kép -->
+  <header>
+    <img src="../kepek/header.png" alt="Fejléc kép" class="hero-image" />
+  </header>
+
+  <!-- Fő tartalom -->
+  <main>
+    <section>
+      <h1>1. Lecke: Der / Die / Das különböző esetekben</h1>
+      <h2>Német névelők alapjai</h2>
+      <p>
+        A német nyelvben a főnevek elé általában névelőt teszünk. A névelők formája függ attól,
+        hogy a főnév milyen nemű (<strong>der</strong> – hímnem, <strong>die</strong> – nőnem, 
+        <strong>das</strong> – semleges nem), valamint attól is, hogy milyen <em>esetben</em> áll 
+        a mondatban (Nominativ, Akkusativ, Dativ, Genitiv).
+      </p>
+    </section>
+
+    <!-- Első táblázat: áttekintő (helyes formák) -->
+    <section>
+      <h2>Der / Die / Das esetei (áttekintés)</h2>
+      <p>
+        Az alábbi táblázatban láthatod a határozott névelők ragozását a négy nyelvtani esetben. 
+        Figyeld meg, hogyan változik a névelő alakja: például hímnemben a Nominativ <em>der</em>, 
+        az Akkusativ <em>den</em>, a Dativ <em>dem</em>, míg a Genitiv <em>des</em> – a többes számban pedig 
+        a Dativ <em>den</em> és a Genitiv <em>der</em>.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Eset</th>
+            <th>Hímnem</th>
+            <th>Nőnem</th>
+            <th>Semleges</th>
+            <th>Többes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nominativ</strong></td>
+            <td>der</td>
+            <td>die</td>
+            <td>das</td>
+            <td>die</td>
+          </tr>
+          <tr>
+            <td><strong>Akkusativ</strong></td>
+            <td>den</td>
+            <td>die</td>
+            <td>das</td>
+            <td>die</td>
+          </tr>
+          <tr>
+            <td><strong>Dativ</strong></td>
+            <td>dem</td>
+            <td>der</td>
+            <td>dem</td>
+            <td>den</td>
+          </tr>
+          <tr>
+            <td><strong>Genitiv</strong></td>
+            <td>des</td>
+            <td>der</td>
+            <td>des</td>
+            <td>der</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        A fenti táblázat segít megérteni, hogy a névelők milyen logikával változnak az esetek és 
+        nemek szerint. Fontos, hogy ne csak mechanikusan, hanem a kontextusban is lásd, hogy melyik 
+        forma mikor szükséges!
+      </p>
+    </section>
+
+    <!-- Bővebb magyarázat és példamondatok -->
+    <section>
+      <h2>Példamondatok és további magyarázat</h2>
+      <p><br>
+        A német mondatszerkesztésben a helyes névelő használata elengedhetetlen, mert az 
+        alany, tárgy, részeshatározó és birtokos esetek mindegyike más-más alakot kíván. Például:
+      </p>
+      <ul>
+        <li><strong>Nominativ:</strong> <em>Der Mann kommt.</em> (A férfi jön.)</li>
+        <li><strong>Akkusativ:</strong> <em>Ich sehe den Mann.</em> (Látom a férfit.)</li>
+        <li><strong>Dativ:</strong> <em>Ich gebe dem Mann ein Buch.</em> (Adok a férfinak egy könyvet.)</li>
+        <li><strong>Genitiv:</strong> <em>Das ist das Auto des Mannes.</em> (Ez a férfi autója.)</li>
+      </ul>
+      <p>
+        Ha a német főneveket mindig a névelővel együtt tanulod meg (például <em>der Tisch</em>, 
+        <em>die Tür</em>, <em>das Fenster</em>), sokkal könnyebb lesz később felismerni, melyik esetben 
+        melyik forma szükséges. A Genitiv esetben például gyakran a -s vagy -es végződés jelenik meg, 
+        míg a Dativ esetben egy -m végződés jellemző.
+      </p>
+      <p>
+        Továbbá, fontos tudni, hogy a többes számban a Dativ esetben gyakran <em>den</em> alakot, 
+        míg a Genitiv esetben <em>der</em> alakot használjuk. Ez a különbség segít abban, hogy 
+        a mondatok jelentése egyértelmű legyen.
+      </p>
+      <p>
+        Az alábbi gyakorló feladat során lehetőséged van arra, hogy fejből töltsd ki a 
+        ragozott névelőket. Próbáld meg önállóan kitölteni a táblázatot, majd ellenőrizd a válaszaidat.
+      </p>
+    </section>
+
+    <!-- Második táblázat: Gyakorló feladat (teljesen üres, 16 mező) -->
+    <section>
+      <h2>Gyakorló feladat – Töltsd ki a teljes táblázatot!</h2>
+      <form id="full-article-form">
+        <table>
+          <thead>
+            <tr>
+              <th>Eset</th>
+              <th>Hímnem</th>
+              <th>Nőnem</th>
+              <th>Semleges</th>
+              <th>Többes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Nominativ -->
+            <tr>
+              <td><strong>Nominativ</strong></td>
+              <td><input type="text" name="a1" /></td>
+              <td><input type="text" name="a2" /></td>
+              <td><input type="text" name="a3" /></td>
+              <td><input type="text" name="a4" /></td>
+            </tr>
+            <!-- Akkusativ -->
+            <tr>
+              <td><strong>Akkusativ</strong></td>
+              <td><input type="text" name="a5" /></td>
+              <td><input type="text" name="a6" /></td>
+              <td><input type="text" name="a7" /></td>
+              <td><input type="text" name="a8" /></td>
+            </tr>
+            <!-- Dativ -->
+            <tr>
+              <td><strong>Dativ</strong></td>
+              <td><input type="text" name="a9" /></td>
+              <td><input type="text" name="a10" /></td>
+              <td><input type="text" name="a11" /></td>
+              <td><input type="text" name="a12" /></td>
+            </tr>
+            <!-- Genitiv -->
+            <tr>
+              <td><strong>Genitiv</strong></td>
+              <td><input type="text" name="a13" /></td>
+              <td><input type="text" name="a14" /></td>
+              <td><input type="text" name="a15" /></td>
+              <td><input type="text" name="a16" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" onclick="checkAll()">Ellenőrzés</button>
+        <button type="button" onclick="resetAll()">Válaszok visszaállítása</button>
+        <span id="resultAll" style="margin-left:1em;"></span>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Német Tanulás - Minden jog fenntartva</p>
+  </footer>
+
+  <script>
+    // Sötét mód: Local Storage
+    window.addEventListener('load', function() {
+      const darkModeStatus = localStorage.getItem('darkMode');
+      if (darkModeStatus === 'on') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+
+    // Helyes 16 válasz (ragozott névelők)
+    // Nominativ: (der, die, das, die)
+    // Akkusativ: (den, die, das, die)
+    // Dativ: (dem, der, dem, den)
+    // Genitiv: (des, der, des, der)
+    const correctAll = [
+      "der", "die", "das", "die",
+      "den", "die", "das", "die",
+      "dem", "der", "dem", "den",
+      "des", "der", "des", "der"
+    ];
+
+    function checkAll() {
+      const form = document.getElementById("full-article-form");
+      let correctCount = 0;
+
+      for (let i = 0; i < 16; i++) {
+        const inputName = "a" + (i+1);
+        const userValue = form.elements[inputName].value.trim().toLowerCase();
+        const rightValue = correctAll[i].toLowerCase();
+
+        if (userValue === rightValue) {
+          form.elements[inputName].style.border = "2px solid green";
+          correctCount++;
+        } else {
+          form.elements[inputName].style.border = "2px solid red";
+        }
+      }
+
+      const resultEl = document.getElementById("resultAll");
+      if (correctCount === 16) {
+        resultEl.textContent = "Mind a 16 helyes! Gratulálok!";
+        resultEl.style.color = "green";
+      } else {
+        resultEl.textContent = `Helyes válaszaid: ${correctCount} / 16`;
+        resultEl.style.color = "red";
+      }
+    }
+
+    function resetAll() {
+      const form = document.getElementById("full-article-form");
+      for (let i = 1; i <= 16; i++) {
+        const inputField = form.elements["a" + i];
+        inputField.value = "";
+        inputField.style.border = "1px solid #999";
+      }
+      const resultEl = document.getElementById("resultAll");
+      resultEl.textContent = "";
+      resultEl.style.color = "";
+    }
+  </script>
+</body>
+</html>
